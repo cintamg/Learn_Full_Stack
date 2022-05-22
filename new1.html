@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #head1{
+            color: blueviolet;
+        }
+        .test1{
+            border: solid yellow 5px;
+            font-size: x-large;
+        }
+        .list{
+            border: solid red 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head1">KDISC NEW SESSION</h1>
+    <p class="test1">DOM manipulation using Java Script</p>
+    <div>
+        <ul class="list">
+            <li>getElementsById</li>
+            <li>getElementsByClassName</li>
+            <li>getElementsByTagName</li>
+            <li>querySelector</li>
+        </ul>
+    </div>
+    <a href="google.com">GOOGLE</a>
+    <br>
+    <button>Set Action</button>
+    <script>
+        var x=document.querySelector("ul li:nth-child(2)");
+        x.style.color="blue";
+        x.innerText="Good Morning";
+    </script>
+</body>
+</html>
