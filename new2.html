@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><b><u>Welcome to DOM Events</u></b></h1>
+    <div id="new">
+        <p>HTML DOM events allow JavaScript to register different event handlers on elements in an HTML document.
+            Events are normally used in combination with functions, and the function will not be executed before the event occurs (such as when a user clicks a button).</p>
+    </div>
+    <div  id="divItem">
+        <img  id="imageItem" onmouseover="changeImg()" onmouseleave="resetImg()" src="eventflow.png" alt="" height="500px" width="500px">  
+    </div>
+    <button onclick="changer()">Change Image</button>
+    <button onclick="hide()">Disappear</button>
+    <button ondblclick="reset()">Appear</button>
+    <script src="script.js"></script>
+</body>
+</html>
