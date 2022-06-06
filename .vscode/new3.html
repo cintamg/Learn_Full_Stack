@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <h1>HOW TO CREATE AN OBJECT</h1>
+    <P>A javascript object is a collection of named values</P>
+    <h4>Objects can be created by three methods</h4>
+    <ol>
+        <li>Using an object literal</li>
+        <li>Using the keyword new</li>
+        <li>Using  a constructor</li>
+    </ol>
+</body>
+<script>
+    var student={
+                name : "John",
+                class : 'VII',
+                mark1 : 44,
+                mark2 : 47,
+                mark3 : 49,
+                findSum : function(){
+                    return(this.mark1+this.mark2+this.mark3);
+                },
+                findAvg : function(){
+                    var sum = this.findSum();
+                    return(sum/3);
+                },
+                printer : function(){
+                    var avg = this.findAvg();
+                    console.log('The student named ${this.name} of class ${this.class} has secured an average of ${this.avg}');
+                }
+               }
+    student.printer();
+</script>
+</html>
