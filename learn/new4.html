@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter</title>
+</head>
+<body>
+    <h1>GETTER AND SETTER!</h1>
+    <p>Getter and setter are functions that can be used to access object properties and can be accessed as a property (not as a function)</p>
+</body>
+<script>
+    var student = {
+        firstName : "Arun",
+        lastName : "Kumar",
+        class : '',
+        get fullName(){
+            return ('${this.firstName} ${this.lastName}');
+        },
+        set addClass(clas){
+            this.class = clas;
+        }
+    }
+    console.log(student);
+    console.log(student.fullName);
+    student.addClass = 'XII B';
+    console.log(student.class);
+</script>
+</html>
