@@ -1,12 +1,15 @@
-let press=document.getElementById(press);
-
-function myfunc()
-{
-    var a=1;
+let enter=document.getElementById("enter");
+var press=document.getElementById("press");
+var num=document.getElementById("num");
+function validate(){
+    let x=enter.value;
     try{
-        addalert("Value of a : "+a);
+        if(x=="") throw "Field is empty";
+        if(isNaN(x)) throw "Not a number";
+        if(x<5) throw "Low value";
+        if(x>10) throw "High value";
     }
-    catch(e){
-        console.log("Error : "+e);
+    catch(error){
+        num.innerHTML = "Input is "+ error;
     }
 }
