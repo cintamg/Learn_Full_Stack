@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <h1>Inheritance</h1>
+    <p>Inheritance enables you to define a class that takes all the
+       functionality from a parent class and allows you to add more.</p>
+<script>
+    function Student(name,rollNo)
+    {
+        this.Name=name;
+        this.RollNo=rollNo;
+    }
+    Student.prototype.Class="IX B";
+    function Alumni(){
+        this.Batch=2022;
+    }
+    Alumni.prototype=new Student("Yash",54);
+    var std1=new Alumni();
+    console.log(std1.Name);
+    console.log(std1.RollNo);
+    console.log(std1.Class);
+    console.log(std1.Batch);
+    console.log(std1);
+</script>
+</body>
+</html>
