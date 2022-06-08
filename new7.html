@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS</title>
+</head>
+<body>
+    <h1>Polymorphism</h1>
+    <p>Polymorphism in JavaScript refers to the concept of reusing a single piece of code multiple times.
+        By utilizing Polymorphism, you can define multiple forms of a method, and depending upon the runtime 
+        scenario, one type of object can have different behavior.</p>
+</body>
+<script>
+    const Animal=function(sound)
+    {
+        this.Sound=sound;
+    }
+    Animal.prototype.makeSound=function(){
+        console.log(this.Sound);
+    }
+    var Dog=function(name,breed){
+        this.Name=name;
+        this.Breed=breed;
+    }
+    Dog.prototype=new Animal("Bow bow");
+    var Cat=function(name,breed){
+        this.Name=name;
+        this.Breed=breed;
+    }
+    Cat.prototype=new Animal("Meow");
+    var dog=new Dog("Jackey","Pug");
+    var cat=new Cat("Kurinji","Persian");
+    dog.makeSound();
+    cat.makeSound();
+</script>
+</html>
